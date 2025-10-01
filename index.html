@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>M&M Tutoring Co. | Unlock Your Potential</title>
+  <meta name="description" content="M&M Tutoring Co. tutors all subjects for all ages — K‑12, college, and adult learners — with a personalized approach that builds skills and confidence." />
+  <meta property="og:title" content="M&M Tutoring Co." />
+  <meta property="og:description" content="All subjects • All ages • Personalized tutoring for K‑12, college, and adult learners." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#1f2d5a" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --ink:#1f2d5a;       /* deep navy to match flyer */
+      --rose:#f1a9a0;      /* soft rose */
+      --peach:#ffe9dc;     /* light peach background */
+      --leaf:#5a7d6f;      /* muted green accent */
+      --cream:#fff8f3;     /* card bg */
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);scroll-behavior:smooth;background:var(--peach)}
+    a{color:var(--ink)}
+    .container{max-width:1100px;margin:0 auto;padding:0 20px}
+    header{position:sticky;top:0;background:rgba(255,233,220,.85);backdrop-filter:saturate(160%) blur(6px);border-bottom:1px solid rgba(31,45,90,.08);z-index:10}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;gap:.6rem;align-items:center;font-weight:700;letter-spacing:.2px}
+    .brand .logo{display:grid;place-items:center;width:40px;height:40px;border-radius:12px;background:var(--ink);color:white;font-family:"Playfair Display",serif;font-size:20px}
+    nav a{margin:0 .75rem;text-decoration:none;font-weight:600;opacity:.9}
+    nav a:hover{opacity:1;text-underline-offset:4px;text-decoration:underline}
+
+    /* Hero */
+    .hero{padding:72px 0 48px;position:relative;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:36px;align-items:center}
+    .kicker{font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--leaf);font-size:.85rem}
+    h1{font-family:"Playfair Display",serif;font-size:clamp(36px,5vw,56px);line-height:1.05;margin:.35rem 0 1rem}
+    .lead{font-size:clamp(16px,2.2vw,20px);opacity:.95}
+    .badges{margin:22px 0;display:flex;flex-wrap:wrap;gap:10px}
+    .badge{background:var(--cream);border:1px solid rgba(31,45,90,.12);padding:8px 12px;border-radius:999px;font-weight:600;font-size:.9rem}
+    .cta{display:flex;gap:12px;margin-top:22px;flex-wrap:wrap}
+    .btn{appearance:none;border:none;border-radius:14px;padding:12px 18px;font-weight:700;cursor:pointer}
+    .btn.primary{background:var(--ink);color:white}
+    .btn.secondary{background:white;color:var(--ink);border:2px solid var(--ink)}
+    .card{background:var(--cream);border:1px solid rgba(31,45,90,.12);border-radius:20px;padding:22px}
+    .illus{background:linear-gradient(135deg, #ffd9c7 0%, #ffe9dc 50%, #fff8f3 100%);border-radius:24px;aspect-ratio:4/3;display:grid;place-items:center;border:1px solid rgba(31,45,90,.08)}
+    .illus svg{max-width:90%;height:auto}
+
+    /* Sections */
+    section{padding:56px 0}
+    h2{font-family:"Playfair Display",serif;font-size:clamp(26px,3.2vw,36px);margin:0 0 18px}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+    .list{display:grid;gap:10px;margin:0;padding:0}
+    .list li{list-style:none;display:flex;gap:10px;align-items:flex-start}
+    .check{width:22px;height:22px;border-radius:6px;background:var(--ink);display:grid;place-items:center;color:white;font-weight:700;flex:0 0 22px}
+
+    /* Testimonials */
+    .grid{display:grid;gap:18px;grid-template-columns:repeat(3,1fr)}
+    blockquote{margin:0;padding:18px;background:white;border-radius:18px;border:1px solid rgba(31,45,90,.1);font-size:.98rem}
+    blockquote footer{margin-top:10px;font-weight:700;opacity:.7}
+
+    /* Contact */
+    form{display:grid;gap:12px}
+    input, textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid rgba(31,45,90,.18);font:inherit;background:white}
+    textarea{min-height:120px}
+
+    /* Footer */
+    footer{background:var(--ink);color:white;padding:28px 0;margin-top:40px}
+    footer a{color:#fff7e7}
+
+    /* Utilities */
+    .muted{opacity:.85}
+    .tag{font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:#33406d;font-size:.8rem}
+
+    /* Responsive */
+    @media (max-width: 900px){
+      .hero-grid, .two-col{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr}
+    }
+  </style>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TutoringService",
+      "name": "M&M Tutoring Co.",
+      "description": "All subjects for all ages — K‑12, college, and adult learners. Personalized lessons that build confidence and results.",
+      "areaServed": "US",
+      "email": "mmtutors222@gmail.com"
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">M</div>
+        <div>M&amp;M Tutoring Co.</div>
+      </div>
+      <nav aria-label="Primary">
+        <a href="#services">Services</a>
+        <a href="#ages">Who We Teach</a>
+        <a href="#why">Why Us</a>
+        <a href="#book">Book</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="kicker">Personalized Tutoring</div>
+          <h1>Unlock Your Potential. One Lesson at a Time.</h1>
+          <p class="lead">Founded by <strong>Mia</strong> and <strong>Muskaan</strong>, we tutor <strong>all subjects for all ages</strong> — from early learners to high school, <strong>college students</strong>, and <strong>adult learners</strong>. Every session is tailored to your goals and learning style.</p>
+
+          <div class="badges" role="list" aria-label="Highlights">
+            <span class="badge">All Subjects</span>
+            <span class="badge">K‑12, College & Adult</span>
+            <span class="badge">Confidence‑Building</span>
+            <span class="badge">One‑on‑One Lessons</span>
+          </div>
+
+          <div class="cta">
+            <a class="btn primary" href="#contact">Book a Free Consult</a>
+            <a class="btn secondary" href="mailto:mmtutors222@gmail.com">Email Us</a>
+          </div>
+        </div>
+
+        <div class="illus" aria-hidden="true">
+          <!-- Simple inline SVG illustration: rising grades -->
+          <svg viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Rising grades from F to A">
+            <g fill="#1f2d5a">
+              <rect x="60" y="360" width="80" height="60" rx="10"/>
+              <rect x="160" y="320" width="80" height="100" rx="10"/>
+              <rect x="260" y="260" width="80" height="160" rx="10"/>
+              <rect x="360" y="200" width="80" height="220" rx="10"/>
+              <rect x="460" y="120" width="80" height="300" rx="10"/>
+            </g>
+            <g font-family="Inter, Arial, sans-serif" font-size="36" font-weight="700" fill="#1f2d5a">
+              <text x="92" y="350">F</text>
+              <text x="192" y="310">D</text>
+              <text x="292" y="250">C</text>
+              <text x="392" y="190">B</text>
+              <text x="492" y="110">A</text>
+            </g>
+            <path d="M60,380 C160,320 260,300 360,240 420,200 480,160 540,120" fill="none" stroke="#d25a4f" stroke-width="10" stroke-linecap="round"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- Booking -->
+    <section id="book">
+      <div class="container two-col">
+        <div>
+          <h2>Request a Session</h2>
+          <p class="muted">Tell us a few times that work for you. We approve each request before it’s confirmed and then send rates + a secure payment link.</p>
+          <div class="card">
+            <form action="https://formspree.io/f/YOUR-FORM-ID" method="POST" onsubmit="return validateForm(this)">
+              <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+              <label for="rq-name">Your name</label>
+              <input id="rq-name" name="name" required>
+
+              <label for="rq-email">Email</label>
+              <input id="rq-email" name="email" type="email" required>
+
+              <label for="rq-student">Student (name & level)</label>
+              <input id="rq-student" name="student" placeholder="e.g., Aiden – 8th grade">
+
+              <label for="rq-subject">Subject</label>
+              <input id="rq-subject" name="subject" placeholder="Algebra, Reading, Chemistry…">
+
+              <label for="rq-times">Preferred dates/times (share 2–3)</label>
+              <textarea id="rq-times" name="times" placeholder="Mon 5–6pm; Tue 6–7pm; Sat 10–11am"></textarea>
+
+              <label for="rq-notes">Notes</label>
+              <textarea id="rq-notes" name="message" placeholder="Online or in-person, goals, location"></textarea>
+
+              <button class="btn primary" type="submit">Submit Request</button>
+              <p class="muted" style="margin-top:8px">We’ll review and email you within 24 hours with approval and rates.</p>
+            </form>
+          </div>
+        </div>
+        <div class="card">
+          <div class="tag">How approvals work</div>
+          <ol class="list" style="counter-reset:step">
+            <li style="list-style:none"><span class="check">1</span><span><strong>Request:</strong> send your best times via the form.</span></li>
+            <li style="list-style:none"><span class="check">2</span><span><strong>Review:</strong> we check tutor availability (no charge yet).</span></li>
+            <li style="list-style:none"><span class="check">3</span><span><strong>Approve:</strong> we email our rate + a secure payment link.</span></li>
+          </ol>
+          <p class="muted" style="margin-top:8px">Want live availability later? We can embed a shared Google Calendar any time.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services">
+      <div class="container two-col">
+        <div>
+          <h2>Subjects We Tutor</h2>
+          <p class="muted">We cover core academics and specialized coursework with clear explanations, practice, and feedback.</p>
+          <ul class="list">
+            <li><span class="check">✓</span><span><strong>Math:</strong> Arithmetic, Pre‑Algebra, Algebra, Geometry, Trig, Pre‑Calc, Calculus, Statistics</span></li>
+            <li><span class="check">✓</span><span><strong>Science:</strong> General Science, Biology, Chemistry, Physics, Earth Science</span></li>
+            <li><span class="check">✓</span><span><strong>Reading & Writing:</strong> Literacy, Comprehension, Grammar, Essays & Research</span></li>
+            <li><span class="check">✓</span><span><strong>Study Skills & Test Prep:</strong> Organization, Note‑taking, Time‑management, SAT/ACT/GED/TSIA</span></li>
+            <li><span class="check">✓</span><span><strong>College Support:</strong> Intro courses, Labs, Writing for college, Study plans</span></li>
+            <li><span class="check">✓</span><span><strong>Adult Learners:</strong> Placement tests, professional exams, returning‑to‑school refreshers</span></li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="tag">How it works</div>
+          <h3 style="margin:.35rem 0 10px">Simple, supportive, effective</h3>
+          <ol class="list" style="counter-reset:step">
+            <li style="list-style: none"><span class="check">1</span><span><strong>Free consult:</strong> share goals, classes, and timelines.</span></li>
+            <li style="list-style: none"><span class="check">2</span><span><strong>Personalized plan:</strong> we tailor topics, pacing, and practice.</span></li>
+            <li style="list-style: none"><span class="check">3</span><span><strong>Weekly progress:</strong> track skills, celebrate wins, adjust as needed.</span></li>
+          </ol>
+          <p class="muted" style="margin-top:8px">One‑on‑one sessions with optional check‑ins for parents or students.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ages / Who we teach -->
+    <section id="ages">
+      <div class="container two-col">
+        <div>
+          <h2>Who We Teach</h2>
+          <p class="muted">Everyone learns differently. We adapt to the learner.</p>
+          <div class="grid" style="grid-template-columns:repeat(2,1fr);gap:14px">
+            <div class="card"><strong>K‑5:</strong> Foundations, phonics, number sense, confidence.</div>
+            <div class="card"><strong>Middle & High School:</strong> Coursework support, study skills, test prep.</div>
+            <div class="card"><strong>College:</strong> Core STEM & writing, exam prep, academic coaching.</div>
+            <div class="card"><strong>Adult Learners:</strong> Refreshers, GED/placement, professional goals.</div>
+          </div>
+        </div>
+        <div>
+          <h2 id="why">Why Families Choose Us</h2>
+          <ul class="list">
+            <li><span class="check">★</span><span><strong>All subjects • All ages:</strong> one trusted team for the whole journey.</span></li>
+            <li><span class="check">★</span><span><strong>Personalized lessons:</strong> we match pace, learning style, and goals.</span></li>
+            <li><span class="check">★</span><span><strong>Confidence first:</strong> students gain skills <em>and</em> self‑belief.</span></li>
+            <li><span class="check">★</span><span><strong>Clear communication:</strong> friendly updates and actionable next steps.</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section aria-labelledby="testimonials-title">
+      <div class="container">
+        <h2 id="testimonials-title">Kind Words</h2>
+        <div class="grid">
+          <blockquote>“M&M Tutoring Co. helped my child go from struggling to confident. Grades improved, but the best part was seeing them enjoy learning again.”<footer>— Parent of 8th grader</footer></blockquote>
+          <blockquote>“I’m a returning adult learner and needed a math refresher. The sessions were patient, clear, and tailored to me.”<footer>— Adult learner</footer></blockquote>
+          <blockquote>“As a college student, I appreciated the structured study plan and weekly check‑ins. Huge difference for finals.”<footer>— College sophomore</footer></blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="container two-col">
+        <div>
+          <h2>General Inquiries</h2>
+          <p class="muted">Ask a question or describe what you’re looking for. We reply within 24 hours.</p>
+          <!-- Formspree/EmailJS compatible form. Replace the action URL. -->
+          <form action="https://formspree.io/f/YOUR-FORM-ID" method="POST" onsubmit="return validateForm(this)">
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+            <label for="name">Name</label>
+            <input id="name" name="name" required />
+
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required />
+
+            <label for="details">How can we help?</label>
+            <textarea id="details" name="message" placeholder="Subject, level (K‑12/college/adult), goals, timing"></textarea>
+
+            <button class="btn primary" type="submit">Send Inquiry</button>
+            <p class="muted">Or email us directly: <a href="mailto:mmtutors222@gmail.com">mmtutors222@gmail.com</a></p>
+          </form>
+        </div>
+        <div class="card">
+          <div class="tag">At a glance</div>
+          <ul class="list" style="margin-top:10px">
+            <li><span class="check">✓</span><span><strong>All subjects:</strong> Math, Science, Reading/Writing, Test Prep & more</span></li>
+            <li><span class="check">✓</span><span><strong>All ages:</strong> K‑12, College, Adult Learners</span></li>
+            <li><span class="check">✓</span><span><strong>Founders:</strong> Mia & Muskaan</span></li>
+            <li><span class="check">✓</span><span><strong>Email:</strong> <a href="mailto:mmtutors222@gmail.com">mmtutors222@gmail.com</a></span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;gap:16px;align-items:center;flex-wrap:wrap">
+      <div>&copy; <span id="year"></span> M&M Tutoring Co. • All rights reserved.</div>
+      <div>Designed for clarity & accessibility.</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    function validateForm(f){
+      if(!f.email.value.includes('@')){ alert('Please enter a valid email.'); return false; }
+      return true;
+    }
+  </script>
+</body>
+</html>
